@@ -1,7 +1,7 @@
 <?php
 
 function getConnection(){
-    $dsn = 'mysql:host=localhost:3306;dbname=conbovwebx;charset=utf8';
+    $dsn = 'mysql:host=localhost:3306;dbname=conbovweb;charset=utf8';
     $user = 'root';
     $pass = '';
 
