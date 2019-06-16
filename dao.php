@@ -4,8 +4,11 @@ include './connection.php';
 function save(){
     $conn = getConnection();
     
-    $sql = "";
-    $conn->exec($sql);    
+    $nome = filter_input(INPUT_POST, 'nome');
+    $pass = filter_input(INPUT_POST, 'pass');
+    
+    $sql = "insert into usuario(login,password) values('$nome','$pass');";    
+    $conn->exec($sql);       
 }
 
 ?>
