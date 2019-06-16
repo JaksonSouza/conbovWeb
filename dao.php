@@ -8,7 +8,9 @@ function save(){
     $pass = filter_input(INPUT_POST, 'pass');
     
     $sql = "insert into usuario(login,password) values('$nome','$pass');";    
-    $conn->exec($sql);       
+    $conn->exec($sql);
+    
+    echo '<br>Gravado no banco.';
 }
 
 ?>

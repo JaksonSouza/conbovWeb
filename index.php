@@ -13,9 +13,9 @@
             <input type="password" name="pass" placeholder="senha"/>
             <input type="submit" value="login"/>          
         </form>
+        <button onClick="window.location.href = 'cadastro.php';">Cadastrar</button>
         <?php
-           if($_SERVER['REQUEST_METHOD']=='POST')
-           {
+           if($_SERVER['REQUEST_METHOD']=='POST'){
                save();
            } 
         ?>
