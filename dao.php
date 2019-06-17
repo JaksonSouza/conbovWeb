@@ -9,10 +9,12 @@ function save(){
     $login = filter_input(INPUT_POST, 'login');
     $senha = filter_input(INPUT_POST, 'senha');
     
-    $sql = "insert into usuario(nome,login,password,email) values('$nome','$login','$senha','$email');";    
-    $conn->exec($sql);
-    
-    echo '<br>Gravado no banco.';
+    if($nome=='' || $login=='' || $senha=='' || $email==''){
+        echo '<br>Preencha todos os campos.';
+    }else{
+       $sql = "insert into usuario(nome,login,password,email) values('$nome','$login','$senha','$email');";    
+       $conn->exec($sql); 
+    }
 }
 
 ?>
